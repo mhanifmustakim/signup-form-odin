@@ -54,3 +54,20 @@
     line-height: 1.1;
     padding-right: 2ch;
 }
+
+@media screen and (min-width: 768px) {
+    #container {
+        flex-direction: row;
+    }
+
+    #side {
+        min-height: 100vh;
+        width: clamp(10rem, 40%, 35rem);
+        border-bottom: none;
+        border-right: 0.5rem solid var(--off-white);
+    }
+
+    #side>header {
+        margin-top: min(20vh, 20rem);
+    }
+}
