@@ -10,6 +10,8 @@
 
 :root {
     --off-white: #e5e7eb;
+    --bg-color: #f7f7f7;
+    --theme: #BBA6A7;
     font-size: 16px;
 }
 
@@ -53,6 +55,89 @@
     text-align: right;
     line-height: 1.1;
     padding-right: 2ch;
+}
+
+#main {
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1;
+    padding: min(5rem, 3vh) min(2rem, 5vw);
+    background-color: var(--bg-color);
+}
+
+#main>p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#main>p+p {
+    margin-top: min(5rem, 3vh);
+}
+
+#form-collection {
+    --vertical-margin: 5rem;
+    --line-margin: calc(var(--vertical-margin) / 2);
+    --secondary-box-shadow-margin: calc(var(--line-margin) / 2);
+    margin: var(--vertical-margin) 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow:
+        0 0 0 var(--line-margin) white,
+        0 var(--secondary-box-shadow-margin) 0.5rem var(--secondary-box-shadow-margin) gray;
+}
+
+#form-collection>header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100;
+}
+
+#form-collection>.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc((var(--vertical-margin) - 1rem)/ 2);
+    font-family: inherit;
+}
+
+.form-control>input {
+    width: 95%;
+    border-radius: 0.2em;
+    border: 1px solid var(--off-white);
+    margin-top: 0.2rem;
+    font-size: inherit;
+    line-height: 2;
+}
+
+.form-control>input:active,
+.form-control>input:focus,
+.form-control>input:focus-visible {
+    border: 1px solid hsl(212, 100%, 49%);
+    box-shadow: 0 0 0.2rem gray;
+    outline: none;
+    padding-left: 1ch;
+}
+
+button[type="submit"] {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--bg-color);
+    background-color: var(--theme);
+    box-shadow: 0 0 0.5rem gray;
+    outline: none;
+    border: none;
+    border-radius: 0.5em;
+    margin-top: -1rem;
+}
+
+#main> :last-child {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+#main>:last-child>a {
+    color: var(--theme);
 }
 
 @media screen and (min-width: 768px) {
