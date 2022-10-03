@@ -104,6 +104,7 @@
     margin-top: 0.2rem;
     font-size: inherit;
     line-height: 2;
+    padding-left: 1ch;
 }
 
 .form-control>input:active,
@@ -127,6 +128,22 @@ button[type="submit"] {
     border-radius: 0.5em;
     margin-top: -1rem;
 }
+
+.form-control {
+    position: relative;
+}
+
+.form-control .invalid-input {
+    border: 1px solid red;
+}
+
+.form-control .error {
+    position: absolute;
+    color: red;
+    top: 3.7rem;
+    width: 30ch;
+}
+
 
 #main> :last-child {
     font-weight: normal;

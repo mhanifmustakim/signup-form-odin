@@ -34,23 +34,24 @@
                     <p>(Required fields are labeled *)</p>
                     <div class="form-control">
                         <label for="first-name">*FIRST NAME</label>
-                        <input type="text" name="first_name" id="first-name" required>
+                        <input type="text" name="first_name" id="first-name" required placeholder="Ahmad">
                     </div>
                     <div class="form-control">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last_name" id="last-name">
+                        <input type="text" name="last_name" id="last-name" placeholder="Albab">
                     </div>
                     <div class="form-control">
                         <label for="email">*EMAIL</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" required placeholder="user@example.com">
                     </div>
                     <div class="form-control">
                         <label for="phone-num">PHONE NUMBER</label>
-                        <input type="tel" name="phone_num" id="phone-num">
+                        <input type="tel" name="phone_num" id="phone-num" placeholder="0123456789">
                     </div>
                     <div class="form-control">
                         <label for="pwd">*PASSWORD</label>
                         <input type="password" name="password" id="pwd" required>
+                        <p class="error" hidden>Error: Passwords do not match!</p>
                     </div>
                     <div class="form-control">
                         <label for="confirm-pwd">*CONFIRM PASSWORD</label>
